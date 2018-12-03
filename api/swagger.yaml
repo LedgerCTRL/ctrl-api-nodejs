@@ -39,7 +39,7 @@ paths:
           description: "OK"
           schema:
             type: "string"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "swagger_server.controllers.admins_controller"
   /scan:
     post:
       tags:
@@ -112,7 +112,7 @@ paths:
         description: "User's ETH index"
         required: true
         type: "integer"
-      - name: "public"
+      - name: "isPublic"
         in: "formData"
         description: "boolean flag to make item public"
         required: false
@@ -229,7 +229,7 @@ paths:
           description: "Invalid input"
           schema:
             type: "string"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "swagger_server.controllers.admins_controller"
     post:
       tags:
       - "admins"
@@ -250,7 +250,7 @@ paths:
       responses:
         200:
           description: "Created"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "swagger_server.controllers.admins_controller"
   /transfers/{itemhash}:
     get:
       tags:
@@ -305,7 +305,7 @@ paths:
       responses:
         200:
           description: "Retrieved accounts"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "swagger_server.controllers.admins_controller"
     post:
       tags:
       - "developers"

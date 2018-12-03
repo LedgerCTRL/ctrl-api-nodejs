@@ -7,8 +7,8 @@ module.exports.add_inventory = function add_inventory (req, res, next) {
   var inventoryItem = req.swagger.params['inventoryItem'].value;
   var userIndex = req.swagger.params['userIndex'].value;
   var upfile = req.swagger.params['upfile'].value;
-  var public = req.swagger.params['public'].value;
-  Developers.add_inventory(inventoryItem,userIndex,upfile,public)
+  var isPublic = req.swagger.params['isPublic'].value;
+  Developers.add_inventory(inventoryItem,userIndex,upfile,isPublic)
     .then(function (response) {
       utils.writeJson(res, response);
     })

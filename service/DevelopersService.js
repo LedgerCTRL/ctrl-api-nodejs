@@ -8,10 +8,10 @@
  * inventoryItem String JSON-encoded item detail
  * userIndex Integer User's ETH index
  * upfile File The file to upload (optional)
- * public Boolean boolean flag to make item public (optional)
+ * isPublic Boolean boolean flag to make item public (optional)
  * no response value expected for this operation
  **/
-exports.add_inventory = function(inventoryItem,userIndex,upfile,public) {
+exports.add_inventory = function(inventoryItem,userIndex,upfile,isPublic) {
   return new Promise(function(resolve, reject) {
     resolve();
   });
