@@ -39,7 +39,7 @@ paths:
           description: "OK"
           schema:
             type: "string"
-      x-swagger-router-controller: "swagger_server.controllers.admins_controller"
+      x-swagger-router-controller: "Admins"
   /scan:
     post:
       tags:
@@ -60,7 +60,7 @@ paths:
       responses:
         200:
           description: "Scan logged"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /scans/{itemhash}:
     get:
       tags:
@@ -83,7 +83,7 @@ paths:
           description: "OK"
           schema:
             type: "string"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /inventory:
     post:
       tags:
@@ -124,7 +124,7 @@ paths:
           description: "invalid input, object invalid"
         409:
           description: "an existing item already exists"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /inventory/{id}:
     get:
       tags:
@@ -147,7 +147,7 @@ paths:
           description: "OK"
           schema:
             $ref: "#/definitions/InventoryItem"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /file/{id}:
     get:
       tags:
@@ -168,7 +168,7 @@ paths:
       responses:
         200:
           description: "OK"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /items/{userIndex}:
     get:
       tags:
@@ -189,7 +189,7 @@ paths:
       responses:
         200:
           description: "OK"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /transfer:
     post:
       tags:
@@ -210,7 +210,7 @@ paths:
       responses:
         200:
           description: "Transferred item"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /itembase:
     get:
       tags:
@@ -229,7 +229,7 @@ paths:
           description: "Invalid input"
           schema:
             type: "string"
-      x-swagger-router-controller: "swagger_server.controllers.admins_controller"
+      x-swagger-router-controller: "Admins"
     post:
       tags:
       - "admins"
@@ -250,7 +250,7 @@ paths:
       responses:
         200:
           description: "Created"
-      x-swagger-router-controller: "swagger_server.controllers.admins_controller"
+      x-swagger-router-controller: "Admins"
   /transfers/{itemhash}:
     get:
       tags:
@@ -270,7 +270,7 @@ paths:
       responses:
         200:
           description: "Retrieved transfer history"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /ethUser/{userIndex}:
     get:
       tags:
@@ -290,7 +290,7 @@ paths:
       responses:
         200:
           description: "Retrieved account"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /ethUser:
     get:
       tags:
@@ -305,7 +305,7 @@ paths:
       responses:
         200:
           description: "Retrieved accounts"
-      x-swagger-router-controller: "swagger_server.controllers.admins_controller"
+      x-swagger-router-controller: "Admins"
     post:
       tags:
       - "developers"
@@ -324,7 +324,7 @@ paths:
       responses:
         200:
           description: "Created ETH account"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
   /erc20:
     post:
       tags:
@@ -346,7 +346,7 @@ paths:
       responses:
         200:
           description: "Created"
-      x-swagger-router-controller: "swagger_server.controllers.developers_controller"
+      x-swagger-router-controller: "Developers"
 securityDefinitions:
   APIKeyHeader:
     type: "apiKey"
