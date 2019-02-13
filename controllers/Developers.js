@@ -2,6 +2,24 @@
 
 var utils = require('../utils/writer.js');
 var Developers = require('../service/DevelopersService');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/test');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+  // connected to mongoDB
+  console.log('connected to mongoDB on localhost.');
+})
+var accountModel = require('../mongo/models/Account');
+var accountSchema = new mongoose.Schema(accountModel);
+var Account = mongoose.model('Account', accountSchema);
+var testAccount = new Account({
+  email: "test@email.biz",
+  password: "hashahashahashahashahash",
+  ethId: "420blzETH",
+  itembase: "xx_itembase_xx"
+});
 
 module.exports.add_inventory = function add_inventory (req, res, next) {
   var inventoryItem = req.swagger.params['inventoryItem'].value;
