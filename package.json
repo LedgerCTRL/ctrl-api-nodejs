@@ -16,6 +16,7 @@
     "connect": "^3.2.0",
     "js-yaml": "^3.3.0",
     "mongoose": "^5.4.12",
-    "swagger-tools": "^0.10.4"
+    "swagger-tools": "^0.10.4",
+    "web3": "^1.0.0-beta.46"
   }
 }
