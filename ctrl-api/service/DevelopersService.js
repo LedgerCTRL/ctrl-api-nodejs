@@ -1,5 +1,6 @@
 'use strict';
-
+const Web3 = require("web3");
+const web3 = new Web3(Web3.givenProvider || "http://localhost:8545");
 
 /**
  * adds an inventory item
@@ -136,10 +137,11 @@ exports.new_erc20 = function(data) {
  * password Password  (optional)
  * no response value expected for this operation
  **/
-exports.new_eth_user = function(password) {
-  return new Promise(function(resolve, reject) {
-    resolve();
-  });
+exports.new_eth_user = async function(password) {
+  console.log(password);
+  let address = await web3.eth.personal.newAccount(password.password);
+  console.log(address);
+  return {address: address};
 }
 
 

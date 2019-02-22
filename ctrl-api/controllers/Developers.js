@@ -21,7 +21,7 @@ var Account = mongoose.model('Account', accountSchema);
 var testAccount = new Account({
   email: "test@email.biz",
   password: "hashahashahashahashahash",
-  ethId: "420blzETH",
+  ethId: "123ETH",
   itembase: "xx_itembase_xx"
 });
 
